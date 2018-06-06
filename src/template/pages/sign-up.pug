@@ -11,12 +11,15 @@ block main
 			+e.top
 				+e.back-title.back-title
 					h4 SIGN UP
-				+e.text(data-anim-stagger='fade-y')
-					+e.title.title-md
-						h2 РЕГИСТРАЦИЯ
-					+e.descr
-						p Зарегистрируйся и начни программу.
-						p Ты можешь зарегистрироваться использую социяальную сеть
+
+				+e.top-container.container
+					+e.text(data-anim-stagger='fade-y')
+						+e.title.title-md
+							h2 РЕГИСТРАЦИЯ
+						+e.descr
+							p Зарегистрируйся и начни программу.
+							p Ты можешь зарегистрироваться использую социяальную сеть
+
 			+e.container.container
 				+e.socials(data-anim='fade-y' data-anim-delay='0.2')
 					+e.A.socials-btn._fb(href='#!')
@@ -29,7 +32,7 @@ block main
 						h3 Регистрация через email
 
 					+b.form-group
-						+b.INPUT.form-control(type='text' name='' required data-validation="custom" data-validation-regexp="^([A-z]+)$")
+						+b.INPUT.form-control(type='text' name='' autocomplete="off" required data-validation="custom" data-validation-regexp="^([A-z]+)$")
 						+b.control-label
 							span Имя
 						+b.help-block Необходимо заполнить «ФИО».
