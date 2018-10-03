@@ -1,10 +1,7 @@
 .screen
+   overflow: hidden
    height: 100vh
    +cover
-   +md
-      background-position: 30% 50%
-   +xs
-      background-position: 100% 50%
    +mob-fix
       height: 170vh
    
@@ -20,7 +17,23 @@
          align-items: center
          justify-content: flex-end
          
+   &__bg
+      position: absolute
+      z-index: 1
+      bottom: -20%
+      left: calc(50% - 43vw)
+      height: 140%
+      max-width: none
+      +md
+         height: 100%
+         bottom: 0
+         left: -100px
+      +sm
+         display: none
+
    &__content
+      position: relative
+      z-index: 2
       padding-right: 56px
       max-width: 740px
       text-align: right
